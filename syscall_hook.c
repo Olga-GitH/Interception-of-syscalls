@@ -16,7 +16,7 @@ static asmlinkage ssize_t hooked_sys_write(unsigned int fd, const char __user *b
 {
   printk(KERN_INFO "Hooked write called\n");
   // Any additional logic
-  return 0; //original_sys_write(fd, buf, count);
+  return original_sys_write(fd, buf, count);
 }
 
 // Hooked read system call
@@ -24,7 +24,7 @@ static asmlinkage ssize_t hooked_sys_read(unsigned int fd, const char __user *bu
 {
   printk(KERN_INFO "Hooked read called\n");
   // Any additional logic
-  return 0; //original_sys_read(fd, buf, count);
+  return original_sys_read(fd, buf, count);
 }
 
 // Pre-handler for write
