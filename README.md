@@ -17,3 +17,7 @@ Interception of system calls in Linux OS
 2. Загружаем модуль: sudo insmod syscall_hook.ko
 3. Выгружает модуль: sudo rmmod syscall_hook
 4. Проверка логов: sudo dmesg
+
+# Примеры выводимых логов:
+![alt text](https://github.com/Olga-GitH/Interception-of-syscalls/blob/main/examples/5b39be16-c7be-4997-b7b7-d80d5ae8a644.jpg)
+![alt text](https://github.com/Olga-GitH/Interception-of-syscalls/blob/main/examples/8f47f1d0-2955-49f3-a5f3-9c569b0d65f0.jpg)
