@@ -64,7 +64,7 @@ static int pre_handler_write(struct kprobe *p, struct pt_regs *regs)
 {
     printk(KERN_INFO "pre_handler1 for <write>: p->addr = 0x%p, ip = %lx, flags = 0x%lx\n", p->addr, regs->ip, regs->flags);
     // Save the original system call address
-    original_sys_write = (void *)p->addr;
+    original_sys_write = (void *)regs->ip;
     // Change the instruction pointer to our hooked function
     regs->ip = (unsigned long)hooked_sys_write;
     printk(KERN_INFO "pre_handler2 for <write>: p->addr = 0x%p, ip = %lx, flags = 0x%lx\n", p->addr, regs->ip, regs->flags);
@@ -82,7 +82,7 @@ static int pre_handler_read(struct kprobe *p, struct pt_regs *regs)
 {
     printk(KERN_INFO "pre_handler1 for <read>: p->addr = 0x%p, ip = %lx, flags = 0x%lx\n", p->addr, regs->ip, regs->flags);
     // Save the original system call address
-    original_sys_read = (void *)p->addr;
+    original_sys_read = (void *)regs->ip;
     // Change the instruction pointer to our hooked function
     regs->ip = (unsigned long)hooked_sys_read;
     printk(KERN_INFO "pre_handler2 for <read>: p->addr = 0x%p, ip = %lx, flags = 0x%lx\n", p->addr, regs->ip, regs->flags);
