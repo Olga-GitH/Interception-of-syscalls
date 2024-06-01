@@ -15,5 +15,5 @@ Interception of system calls in Linux OS
 # Для выполнения программы:
 1. Компилируем модуль: make
 2. Загружаем модуль: sudo insmod syscall_hook.ko
-3. Проверка логов: sudo dmesg
-4. Выгружает модуль: sudo rmmod syscall_hook
+3. Выгружает модуль: sudo rmmod syscall_hook
+4. Проверка логов: sudo dmesg
