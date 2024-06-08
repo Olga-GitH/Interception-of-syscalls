@@ -12,7 +12,7 @@ g++ -g -o try_read try_read.cpp
 ````
 ./try_read
 ````
-![alt text](https://github.com/Olga-GitH/Interception-of-syscalls/blob/main/examples/IMG_8058.PNG)
+![alt text](https://github.com/Olga-GitH/Interception-of-syscalls/blob/main/examples/IMG_8058_.PNG)
 
 4. Осуществляем трассировку:
 ````
